@@ -20,6 +20,7 @@ if ($result) {
     mysqli_free_result($result);
 }
 else {
+    
     echo "{$sql} 語法執行失敗，錯誤訊息: " . mysqli_error($conn);
 }
 
@@ -28,6 +29,7 @@ if(!empty($result)){
 }
 else {
     
+
     echo "查無資料";
 }
 ?>
