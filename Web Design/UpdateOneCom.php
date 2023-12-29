@@ -12,16 +12,15 @@ $close = $_POST["close"];
 $adj_close = $_POST["adj_close"];
 $volume = $_POST["volume"];
 
-
-$datas = array();
-$sql = "SELECT * FROM {$company}_dalit_table WHERE date = $date ";
-$result = mysqli_query($conn,$sql);
+$check = "SELECT * FROM Date WHERE date = $date ";
+$result = mysqli_query($conn,$check);
 
 if ($result) {
     if (mysqli_num_rows($result)>0) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            $datas[] = $row;
-        }
+       
+    }
+    else{
+        
     }
     mysqli_free_result($result);
 }
