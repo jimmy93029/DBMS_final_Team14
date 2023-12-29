@@ -41,14 +41,6 @@ else {
     echo "{$sql} 語法執行失敗，錯誤訊息: " . mysqli_error($conn);
 }
 
-if(!empty($result)){
-    print_r($datas);
-}
-else {
-    
-
-    echo "查無資料";
-}
 ?>
 <h3>sql更新完成</h3>
 <a href="index.php">離開</a>
