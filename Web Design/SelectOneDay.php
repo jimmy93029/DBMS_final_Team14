@@ -9,3 +9,4 @@
         <input type="submit" value="查詢" name="submit"><br><br>
     </form>
 </body>
+<a href="index.php">離開</a>

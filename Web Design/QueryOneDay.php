@@ -33,3 +33,4 @@ else {
     echo "查無資料";
 }
 ?>
+<a href="index.php">離開</a>
