@@ -18,7 +18,7 @@
         <input type="text" name="adj_close"><br><br>
         Volume：
         <input type="text" name="volume"><br><br>
-        <input type="submit" value="查詢" name="submit"><br><br>
+        <input type="submit" value="更新" name="submit"><br><br>
     </form>
     <a href="index.php">離開</a>
 </body>
