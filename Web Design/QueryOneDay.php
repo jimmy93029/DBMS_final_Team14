@@ -8,7 +8,7 @@ $company = $_POST["company"];
 $date = $_POST["date"];
 
 $datas = array();
-$sql = "SELECT * FROM {$company}_dalit_table WHERE date = $date ";
+$sql = "SELECT * FROM {$company}_daily_table t, Date d WHERE d.Date_Day = '$date' AND d.Date_id = t.Date_id";
 $result = mysqli_query($conn,$sql);
 
 if ($result) {

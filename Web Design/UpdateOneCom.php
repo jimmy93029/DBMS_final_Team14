@@ -27,11 +27,11 @@ $company_id = $result_com->fetch_object();
 if ($result) {
     if (mysqli_num_rows($result)>0) {
         $date_id = $result->fetch_object();
-        $sql = "UPDATE '".$company."'_daliy_table SET Open='".$open."', High='".$high."', Low='".$low."', Close='".$close."', Adj Close='".$adj_close."', Volume='".$volume."' Where Date_id='".$date_id->Date_id."'";
+        $sql = "UPDATE '".$company."'_daily_table SET Open='".$open."', High='".$high."', Low='".$low."', Close='".$close."', Adj Close='".$adj_close."', Volume='".$volume."' Where Date_id='".$date_id->Date_id."'";
         $conn->query($sql);
     }
     else{
-        $sql = "INSERT INTO '".$company."'_daliy_table VALUES('".$company_id->Company_id."', '".$date_num."', '".$open."', '".$high."', '".$low."', '".$close."', '".$adj_close."', '".$volume."')";
+        $sql = "INSERT INTO '".$company."'_daily_table VALUES('".$company_id->Company_id."', '".$date_num."', '".$open."', '".$high."', '".$low."', '".$close."', '".$adj_close."', '".$volume."')";
         $conn->query($sql);
     }
     mysqli_free_result($result);
