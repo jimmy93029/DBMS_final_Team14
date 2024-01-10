@@ -30,10 +30,10 @@ if ($result) {
             <tr>
                 <td>{$company}</td>
                 <td>{$row['Date_day']}</td>
-                <td>{$row['Open']}</td>
+                <td>{$row['Open_Price']}</td>
                 <td>{$row['High']}</td>
                 <td>{$row['Low']}</td>
-                <td>{$row['Close']}</td>
+                <td>{$row['Close_Price']}</td>
                 <td>{$row['Adj_Close']}</td>
                 <td>{$row['Volume']}</td>
             </tr>

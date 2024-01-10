@@ -9,7 +9,6 @@
     <ul>
         
         <li><a href="select.php">SELECT查詢資料庫中的資料</a></li>
-        <li><a href="insert.php">INSERT插入資料庫中的資料</a></li>
         <li><a href="update.php">UPDATE更改資料庫中的資料</a></li>
         <li><a href="delete.php">DELETE刪除資料庫中的資料</a></li>
         <li><a href="select.php">CREATE創建新的公司表格</a></li>

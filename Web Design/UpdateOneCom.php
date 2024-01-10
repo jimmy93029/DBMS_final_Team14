@@ -34,8 +34,6 @@ if ($result) {
         $com = "SELECT * FROM {$company}_daily_table";
         $result_com = mysqli_query($conn, $com);
         $company_id = $result_com->fetch_object()->Company_id;
-        $tm = mysqli_num_rows($result_com);
-        echo $tm;
         $sql = "INSERT INTO {$company}_daily_table VALUES ($company_id, $date_id, $open, $high, $low, $close, $adj_close, $volume)";
         $conn->query($sql);
         mysqli_free_result($result_com);
