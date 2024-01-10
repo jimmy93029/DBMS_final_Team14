@@ -11,7 +11,14 @@ $date2 = $_POST["date2"];
 $sql = "SELECT * FROM {$company}_daily_table t, Date d WHERE d.Date_Day BETWEEN '$date1' AND '$date2' AND d.Date_id = t.Date_id";
 $result = mysqli_query($conn,$sql);
 
-
+$check1 = "SELECT * FROM Date WHERE Date.Date_day='$date1'";
+$c1 = mysqli_query($conn, $check1);
+$check2 = "SELECT * FROM Date WHERE Date.Date_day='$date2'";
+$c2 = mysqli_query($conn, $check2);
+if (mysqli_num_rows($c1)==0 or mysqli_num_rows($c2)==0){
+    echo "Date Error";
+    return;
+}
 
 if ($result) {
     if (mysqli_num_rows($result)>0) {
