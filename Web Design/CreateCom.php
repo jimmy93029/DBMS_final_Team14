@@ -40,12 +40,11 @@ echo $insert_data;
 
 $r = mysqli_query($conn, $insert_data);
 if ($r){
-    echo 1;
+    echo "新增完成";
 }
 else{
     mysqli_error($conn);
 }
-echo $py_result;
 ?>
 <a href="index.php">離開</a>
 
