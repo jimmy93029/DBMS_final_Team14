@@ -29,7 +29,7 @@ $conn->query($create_table);
 
 $insert_data = "
 load data local infile 'C:/Users/cheng/Desktop/vscode/database/build_table/{$company}_daily_table.csv'
-into table {$company}_daily_table
+into table {$company}_daily_tablel
 fields terminated by ','
 enclosed by '\"'
 lines terminated by '\r\n'
