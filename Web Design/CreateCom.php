@@ -10,7 +10,7 @@ $sql = "SELECT * FROM Company";
 $num = mysqli_num_rows(mysqli_query($conn, $sql)) + 1;
 $py_result = shell_exec("python makeData.py $company_t $company $num");
 
-$ins_com = "INSERT INTO Company VALUES ($num, '$company')";
+$ins_com = "INSERT INTO Company VALUES ($num, '$company', '$company_t')";
 $conn->query($ins_com);
 
 $create_table = "Create Table IF NOT EXISTS {$company}_daily_table(

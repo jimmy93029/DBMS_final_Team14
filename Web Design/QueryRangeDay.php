@@ -11,8 +11,17 @@ $date2 = $_POST["date2"];
 $sql = "SELECT * FROM {$company}_daily_table t, Date d WHERE d.Date_Day BETWEEN '$date1' AND '$date2' AND d.Date_id = t.Date_id";
 $result = mysqli_query($conn,$sql);
 
+
+
 if ($result) {
     if (mysqli_num_rows($result)>0) {
+        $com_id = $result->fetch_object()->Company_id;
+        $temp = "SELECT * FROM Company WHERE Company_id = $com_id";
+        $com_stock_code = $conn->query($temp)->fetch_object()->Company_stock_code;
+
+        $py_result = shell_exec("python graph.py $com_stock_code $date1 $date2");
+        echo "<img src='query_fig.png' alt='Line Graph'>";
+
         echo "公司{$company}從{$date1}到{$date2}的股價如下";
         $table = '
             <table border=1>

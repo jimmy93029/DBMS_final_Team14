@@ -9,6 +9,7 @@
         
         <li><a href="SelectOneDay.php">查詢一間公司"一"天的資訊</a></li>
         <li><a href="SelectRangeDay.php">查詢一間公司"多"天的資訊</a></li>
+        <li><a href="Compare.php">比較某個時間段的漲幅</a></li>
     </ul>
     <a href="index.php">離開</a>
 </body>    
