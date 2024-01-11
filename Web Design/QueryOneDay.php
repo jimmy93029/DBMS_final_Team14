@@ -7,6 +7,13 @@
 $company = $_POST["company"];
 $date = $_POST["date"];
 
+$check = "SELECT * FROM Company WHERE Company_name = '$company\r'";
+$check_res = mysqli_query($conn,$check);
+if (mysqli_num_rows($check_res) == 0){
+    echo "<h3>錯誤的公司名稱</h3>";
+    return;
+}
+
 $sql = "SELECT * FROM {$company}_daily_table t, Date d WHERE d.Date_Day = '$date' AND d.Date_id = t.Date_id";
 $result = mysqli_query($conn,$sql);
 

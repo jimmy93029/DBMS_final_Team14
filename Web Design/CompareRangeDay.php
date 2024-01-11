@@ -15,9 +15,10 @@ while ($row = mysqli_fetch_array($result)){
     $tmp = "SELECT Close_Price FROM {$com}_daily_table t JOIN Date d ON d.Date_id=t.Date_id WHERE d.Date_day='$date1' OR d.Date_day='$date2'";
     $close = mysqli_query($conn, $tmp);
     $tmparr = array();
+    echo mysqli_num_rows($close);
     if (mysqli_num_rows($close) < 2){
         echo "error date";
-        break;
+        return;
     }
     else{
         $tmparr[] = "'{$com}'";

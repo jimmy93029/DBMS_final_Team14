@@ -29,14 +29,12 @@ $conn->query($create_table);
 
 $insert_data = "
 load data local infile 'C:/Users/cheng/Desktop/vscode/database/build_table/{$company}_daily_table.csv'
-into table {$company}_daily_tablel
+into table {$company}_daily_table
 fields terminated by ','
 enclosed by '\"'
 lines terminated by '\r\n'
 ignore 1 lines;
 ";
-
-echo $insert_data;
 
 $r = mysqli_query($conn, $insert_data);
 if ($r){
